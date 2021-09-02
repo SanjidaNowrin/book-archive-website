@@ -19,21 +19,38 @@
       * {
         font-family: "Poppins", sans-serif;
       }
+      .bg-decor {
+        background-color: rgba(184, 196, 202, 0.685);
+      }
+      img {
+        object-fit: cover;
+      }
     </style>
   </head>
-  <body>
+  <body class="bg-decor">
     <section class="container my-2 w-50">
-      <h1 class="text-center mt-4">Search Book Name</h1>
+      <h1 class="m-4 text-center">Search Book Name</h1>
       <!-- Input Box -->
       <div class="d-flex">
         <input
           type="text"
           class="form-control me-2"
-          placeholder="Search Book"
+          placeholder="Search Book Name"
           id="searchInput"
         />
-        <button class="btn btn-dark">Search</button>
+        <button onclick="searchBtn('search')" class="btn btn-dark">
+          Search
+        </button>
       </div>
+      <!-- error section -->
+      <h4 id="error" class="mt-3 text-center text-danger"></h4>
+    </section>
+    <!-- Book search result -->
+    <section class="container">
+      <div
+        id="search-result"
+        class="mt-4 row row-cols-1 row-cols-md-3 gy-3"
+      ></div>
     </section>
     <!-- script link -->
     <script src="script.js"></script>
